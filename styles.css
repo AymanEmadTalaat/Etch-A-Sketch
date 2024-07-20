@@ -1,0 +1,92 @@
+:root {
+  --color1-: #f8f6f6;
+  --color2-: silver;
+  --color3-: #8c2f39;
+  --color4-: #461220;
+  --color5-: #000;
+}
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    160deg,
+    var(--color3-),
+    var(--color4-),
+    var(--color5-)
+  );
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+h1,
+input,
+#txt {
+  color: var(--color2-);
+}
+
+input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--color3-);
+  transition: border 0.2s;
+}
+
+#txt {
+  margin-right: 15px;
+  border: 1px solid var(--color3-);
+  font-weight: lighter;
+}
+
+#txt:focus {
+  border-color: var(--color4-);
+}
+
+.sbmt:active {
+  transform: translateY(4px);
+}
+
+/* The container that includes the grid */
+.container {
+  background-color: var(--color1-);
+  width: 600px;
+  height: 500px;
+  border: 1px solid var(--color4-);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* The horizontal divs created in JS */
+.container > div {
+  flex: 1;
+  border-left: 1px solid var(--color5-);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
